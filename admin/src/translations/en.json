@@ -1,0 +1,5 @@
+{
+  "errorMessages": {
+    "exists": "Slug already exists for {locale}"
+  }
+}
