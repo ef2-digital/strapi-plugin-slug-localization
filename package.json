@@ -1,6 +1,6 @@
 {
   "name": "@ef2/strapi-plugin-slug-localization",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Slug localization with backend validation.",
   "strapi": {
     "name": "slug-localization",

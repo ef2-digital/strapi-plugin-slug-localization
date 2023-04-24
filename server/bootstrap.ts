@@ -5,7 +5,10 @@ const { ValidationError } = require("@strapi/utils").errors;
 export default ({ strapi }: { strapi: Strapi }) => {
   let models = [];
   Object.entries(strapi.contentTypes).forEach(([key, value]) => {
-    if ("slug" in (value as any).attributes) {
+    if (
+      "slug" in (value as any).attributes &&
+      "locale" in (value as any).attributes
+    ) {
       models.push(key);
     }
   });
