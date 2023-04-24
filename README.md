@@ -7,6 +7,11 @@ Add a slugify option for locales with backend validation for checking existings 
 - **Automatic slug creation bases on title field.** For now, the slug input field checks the current title field and automatic creates slug.
 - **Backend validation:** Checks the slug on save if its unique in the given model/locale combination.
 
+## ✨ Todo
+- Choose attached field, defaults to "title" for now
+- Frontend validation - on the fly validate if slug is available.
+- Translations
+
 ## ⏳ Installation
 
 ```sh
