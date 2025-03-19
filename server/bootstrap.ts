@@ -29,8 +29,10 @@ export default ({ strapi }: { strapi: Strapi }) => {
       if (!existingRecord) {
         return;
       }
+      
+      event.params.data.slug = "-";
 
-      throw new ValidationError(`Slug already exists for locale ${locale}`);
+      return;
     },
     async beforeUpdate(event) {
       const { uid } = event.model;
@@ -45,11 +47,11 @@ export default ({ strapi }: { strapi: Strapi }) => {
         slug,
       });
 
-      if (!existingRecord) {
+      if (!existingRecord || !slug) {
         return;
       }
 
-      throw new ValidationError(`Slug already exists for locale ${locale}`);
+      event.params.data.slug = "-";
     },
   });
 };
